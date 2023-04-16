@@ -17,10 +17,10 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
 		setPassword(event.target.value)
 	}
 
-	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault()
 		try {
-			onLogin(username, password)
+			await onLogin(username, password)
 		} catch (error: any) {
 			setError(error.message)
 		}

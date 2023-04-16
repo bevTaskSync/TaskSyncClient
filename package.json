@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --glob='**/*.test.{ts,tsx,js,jsx}'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

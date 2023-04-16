@@ -1,16 +1,13 @@
 import React from 'react';
 import './App.css';
-import LoginForm from './LoginForm';
+import LoginForm from './LoginForm/LoginForm';
+import { login } from '../utils/api';
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <LoginForm onLogin={(username, password) => {
-          throw new Error('Invalid username or password')
-          console.log(`username: ${username} password: ${password}`)
-
-        }} />
+        <LoginForm onLogin={login} />
       </header>
     </div>
   );

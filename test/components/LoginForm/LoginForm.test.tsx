@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
-import LoginForm from '../../components/LoginForm';
+import LoginForm from '../../../src/components/LoginForm/LoginForm';
 
 describe('Login form', () => {
 	test('renders login form elements', () => {

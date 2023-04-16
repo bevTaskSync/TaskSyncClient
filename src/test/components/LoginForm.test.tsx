@@ -6,8 +6,8 @@ import LoginForm from '../../components/LoginForm';
 
 describe('Login form', () => {
 	test('renders login form elements', () => {
-		const fakeLogin = () => { }
-		render(<LoginForm onLogin={fakeLogin} />);
+		const handleLogin = jest.fn();
+		render(<LoginForm onLogin={handleLogin} />);
 
 		expect(screen.getByLabelText(/username/i)).toBeInTheDocument();
 		expect(screen.getByLabelText(/password/i)).toBeInTheDocument();
